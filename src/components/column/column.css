@@ -1,0 +1,26 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #456C86;
+    margin-right: 5px;
+}
+
+.bgLightBlue{
+    background: lightblue;
+}
+
+.bgLightGray{
+    background: lightgray;
+}
+
+.columnDroppableZone{
+    padding: 4px;
+    width: 250px;
+    min-height: 500px;
+}
+
+.cardsPadding {
+    margin: 8px;
+}
+

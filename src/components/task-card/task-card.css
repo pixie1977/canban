@@ -1,0 +1,15 @@
+.cardMainStyle {
+    user-select: none;
+    padding: 16px;
+    margin: 0 0 8px 0;
+    min-height: 50px;
+    color: white;
+}
+
+.cardIsDragging {
+    background-color: #263B4A;
+}
+
+.cardPlaced {
+    background-color: #456C86;
+}
