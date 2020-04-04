@@ -1,27 +1,27 @@
-import uuid from "uuid";
+import cuid from "cuid";
 
 const itemsFromBackend = [
-    { id: uuid(), content: "First task" },
-    { id: uuid(), content: "Second task" },
-    { id: uuid(), content: "Third task" },
-    { id: uuid(), content: "Fourth task" },
-    { id: uuid(), content: "Fifth task" }
+    { id: cuid(), content: "First task" },
+    { id: cuid(), content: "Second task" },
+    { id: cuid(), content: "Third task" },
+    { id: cuid(), content: "Fourth task" },
+    { id: cuid(), content: "Fifth task" }
 ];
 
 export const columnsDescriptionDataService = {
-    [uuid()]: {
+    [cuid()]: {
         name: "Requested",
         items: itemsFromBackend
     },
-    [uuid()]: {
+    [cuid()]: {
         name: "To do",
         items: []
     },
-    [uuid()]: {
+    [cuid()]: {
         name: "In Progress",
         items: []
     },
-    [uuid()]: {
+    [cuid()]: {
         name: "Done",
         items: []
     }

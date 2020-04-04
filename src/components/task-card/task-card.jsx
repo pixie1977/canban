@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from 'classnames';
-import styles from './task-card.css'
+import './task-card.css'
 
 export const TaskCard = ({provided, snapshot, item}) => {
     return (
@@ -9,9 +9,9 @@ export const TaskCard = ({provided, snapshot, item}) => {
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             className={classNames({
-                [styles.cardMainStyle]: true,
-                [styles.cardPlaced]: !snapshot.isDragging,
-                [styles.cardIsDragging]: snapshot.isDragging
+                'cardMainStyle': true,
+                'cardPlaced': !snapshot.isDragging,
+                'cardIsDragging': snapshot.isDragging
             })}
             style={{
                 ...provided.draggableProps.style

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import {Column} from './../column/column'
-import styles from './column-container.css'
+import './column-container.css'
 
 
 const onDragEnd = (result, columns, setColumns) => {
@@ -45,7 +45,7 @@ export const ColumnContainer = ({columnsDescription}) => {
     const [columns, setColumns] = useState(columnsDescription);
     return (
         <div data-node='column-container'
-             className={styles.columnContainer}
+             className='columnContainer'
         >
             <DragDropContext
                 onDragEnd={result => onDragEnd(result, columns, setColumns)}
