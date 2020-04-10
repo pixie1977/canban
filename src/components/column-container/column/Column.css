@@ -1,0 +1,69 @@
+.columnCommon {
+    display: flex;
+    align-items: stretch;
+    margin: 12px;
+    border-radius: 10px;
+    background-color: #EBECF0;
+    min-width: 250px;
+    height: min-content;
+}
+
+@media screen and (min-width: 1200px) {
+    .columnAdaptive {
+        flex-direction: column;
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .columnAdaptive {
+        flex-direction: column;
+        height: 100%;
+        max-width: 500px;
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .columnAdaptive {
+        flex-direction: column;
+        max-height: 200px;
+        max-width: 300px;
+    }
+}
+
+.scrollableY {
+    overflow-y: scroll;
+}
+
+.bgParked {
+    background: #EBECF0;
+}
+
+.bgDraggingOver {
+    background: lightgray;
+}
+
+.columnDroppableZone {
+    padding: 12px;
+    width: 250px;
+    min-height: 100px;
+}
+
+.cardsPadding {
+    margin: 8px;
+    width: 100%;
+}
+
+.baseCardFont {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+}
+
+.margin16 {
+    margin: 16px;
+}

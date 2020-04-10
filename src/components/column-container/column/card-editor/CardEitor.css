@@ -1,0 +1,28 @@
+.newCardFont {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+}
+
+.margin-lb-16 {
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+.newCardStyle {
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.margin4 {
+    margin: 4px;
+}

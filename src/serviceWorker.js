@@ -60,17 +60,17 @@ function registerValidSW(swUrl, config) {
     .then(registration => {
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
-        if (installingWorker == null) {
+          if (installingWorker === null) {
           return;
         }
         installingWorker.onstatechange = () => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
-              // At this point, the updated precached content has been fetched,
+                // At this point, the updated precached title has been fetched,
               // but the previous service worker will still serve the older
-              // content until all client tabs are closed.
+                // title until all client tabs are closed.
               console.log(
-                'New content is available and will be used when all ' +
+                  'New title is available and will be used when all ' +
                   'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
               );
 
@@ -108,7 +108,7 @@ function checkValidServiceWorker(swUrl, config) {
       const contentType = response.headers.get('content-type');
       if (
         response.status === 404 ||
-        (contentType != null && contentType.indexOf('javascript') === -1)
+        (contentType !== null && contentType.indexOf('javascript') === -1)
       ) {
         // No service worker found. Probably a different app. Reload the page.
         navigator.serviceWorker.ready.then(registration => {
