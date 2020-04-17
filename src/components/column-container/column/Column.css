@@ -11,7 +11,9 @@
 @media screen and (min-width: 1200px) {
     .columnAdaptive {
         flex-direction: column;
-        max-width: 300px;
+        margin-left: 20px;
+        margin-left: 10px;
+        width: auto;
     }
 }
 
