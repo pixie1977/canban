@@ -2,7 +2,7 @@ import React from "react";
 import classNames from 'classnames';
 import './TaskCard.css'
 
-export const TaskCard = ({provided, snapshot, item, setViewSimpleCard}) => {
+export const SimpleTaskCard = ({provided, snapshot, item, setViewSimpleCard}) => {
     const ref = provided ? provided.innerRef : null;
     const draggableProps = provided ? provided.draggableProps : {};
     const dragHandleProps = provided ? provided.dragHandleProps : {};

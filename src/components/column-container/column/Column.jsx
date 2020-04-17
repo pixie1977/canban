@@ -1,9 +1,8 @@
-import React from 'react';
-import {Draggable, Droppable} from 'react-beautiful-dnd';
-import classNames from 'classnames';
-import {TaskCard} from './task-card/TaskCard'
-import {NewCardEditor} from './card-editor/CardEditor';
+import React from 'react'
+import {SimpleTaskCard} from './task-card/SimpleTaskCard'
+import {NewCardEditor} from './card-editor/CardEditor'
 import './Column.css'
+import {DragAnDropTaskCard} from "./task-card/DragAndDropTaskCard";
 
 
 export const Column = ({columnId, column, isAuthorized, updateColumn, setViewSimpleCard}) => {
@@ -15,46 +14,15 @@ export const Column = ({columnId, column, isAuthorized, updateColumn, setViewSim
             <div className='baseCardFont margin16'>{column.name}</div>
             <div className='cardsPadding scrollableY'>
                 {isAuthorized
-                    ? <Droppable droppableId={columnId} key={columnId}>
-                        {(provided, snapshot) => {
-                            return (
-                                <div
-                                    {...provided.droppableProps}
-                                    ref={provided.innerRef}
-                                    className={classNames({
-                                        'columnDroppableZone': true,
-                                        'bgParked': !snapshot.isDraggingOver,
-                                        'bgDraggingOver': snapshot.isDraggingOver
-                                    })}
-                                >
-                                    {column.items.map((item, index) => {
-                                        return (
-                                            <Draggable
-                                                key={item.id}
-                                                draggableId={item.id}
-                                                index={index}
-                                            >
-                                                {(provided, snapshot) => {
-                                                    return (
-                                                        <TaskCard provided={provided}
-                                                                  snapshot={snapshot}
-                                                                  item={item}
-                                                                  setViewSimpleCard={setViewSimpleCard}
-                                                        />
-                                                    );
-                                                }}
-                                            </Draggable>
-                                        );
-                                    })}
-                                    {provided.placeholder}
-                                </div>
-                            );
-                        }}
-                    </Droppable>
+                    ? <DragAnDropTaskCard
+                        column={column}
+                        columnId={columnId}
+                        setViewSimpleCard={setViewSimpleCard}
+                    />
                     : <div>
                         {column.items.map((item) => {
                             return (
-                                <TaskCard
+                                <SimpleTaskCard
                                     key={item.id}
                                     provided={null}
                                     snapshot={null}
