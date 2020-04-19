@@ -1,7 +1,7 @@
 import React from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
-import {Trigger} from "./Trigger";
-import {CustomTooltip} from "./Tooltip";
+import {Trigger} from './Trigger';
+import {CustomTooltip} from './Tooltip';
 
 export const Avatar = ({setAuthorizedHandler}) => {
     return (

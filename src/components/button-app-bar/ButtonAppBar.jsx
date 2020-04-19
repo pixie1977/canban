@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 
 import 'react-popper-tooltip/dist/styles.css';
 import './ButtonAppBar.css';
-import {Avatar} from "./subcomponents/Avatar";
+import {Avatar} from './subcomponents/Avatar';
 
 const styles = {
     root: {
