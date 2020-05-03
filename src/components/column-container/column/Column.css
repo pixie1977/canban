@@ -12,8 +12,12 @@
     .columnAdaptive {
         flex-direction: column;
         margin-left: 20px;
-        margin-left: 10px;
+        margin-right: 10px;
         width: auto;
+    }
+
+    .scrollableY {
+        overflow-y: scroll;
     }
 }
 
@@ -22,20 +26,21 @@
         flex-direction: column;
         height: 100%;
         max-width: 500px;
-        max-height: 200px;
+    }
+
+    .scrollableY {
+        overflow-y: scroll;
     }
 }
 
 @media screen and (max-width: 600px) {
     .columnAdaptive {
         flex-direction: column;
-        max-height: 200px;
         max-width: 300px;
     }
-}
 
-.scrollableY {
-    overflow-y: scroll;
+    .scrollableY {
+    }
 }
 
 .bgParked {

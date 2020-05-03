@@ -4,6 +4,7 @@ import cuid from 'cuid';
 import {Column} from './column/Column';
 import './ColumnContainer.css';
 import {BigText} from './big-text/BigText';
+import {connectViewPortWrapper} from "../view-port-wrapper/ViewPortWrapper";
 
 const onDragEnd = (result, columns, setColumns) => {
     if (!result.destination) return;
@@ -52,13 +53,14 @@ const updateSimpleColumn = (columns, setColumns) => {
         );
     };
 };
+const ViewPortColumn = connectViewPortWrapper(Column);
 const renderColumns = (columns,
                        isAuthorized,
                        setColumns,
                        setViewSimpleCard,) => {
     return Object.entries(columns).map(([columnId, column]) => {
         return (
-            <Column
+            <ViewPortColumn
                 key={cuid()}
                 columnId={columnId}
                 column={column}
@@ -83,7 +85,7 @@ export const ColumnContainer = ({columnsDescription, isAuthorized}) => {
             ) : isAuthorized ? (
                 <DragDropContext
                     onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
-        >
+                >
                     {renderColumns(columns, isAuthorized, setColumns, setViewSimpleCard)}
                 </DragDropContext>
             ) : (
