@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button, Modal} from 'react-bootstrap';
-import TextField from '@material-ui/core/es/TextField/TextField';
 import Box from '@material-ui/core/es/Box/Box';
+import TextField from "@material-ui/core/esm/TextField/TextField";
 import * as cuid from 'cuid';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CardEitor.css';
